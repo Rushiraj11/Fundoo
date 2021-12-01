@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Roboto:wght@400&family=Zen+Kaku+Gothic+New:wght@300&display=swap');
+
+
 .Body-Frame{
     margin: 3vw 25vw;
     border-radius: 8px;
@@ -17,6 +21,8 @@
 
 .Left-side-header1{
     padding-bottom: 12px;
+    font-size: 25px;
+    font-family:Roboto;
 }
 
 .section-one{
@@ -77,3 +83,37 @@
 .Right-side > img {
     margin-bottom:10px ;
 } 
+
+@media only screen and (max-width: 768px) {
+    .Body-Frame{
+        margin:50px 80px;
+        
+    }
+}
+
+@media only screen and (max-width: 544px){
+    .Body-Frame{
+        border-radius: 8px;
+        border: 1px solid #dadce0;
+        display: flex;
+        flex-direction: row;
+        margin:8px;
+        
+    }
+    
+    .Left-side {
+        margin: 15px;
+        font-size: 10px;
+        font-weight: normal;
+        width: 50%;
+
+    }
+   
+    .section-one{
+        color: black;
+        font-size: 15px;
+        font-weight: normal;
+        text-transform: capitalize;
+    }
+
+}
