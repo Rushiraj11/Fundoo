@@ -28,7 +28,7 @@ export class Registeration extends Component {
                         </div>
                         <p class="passwordpattern">Use 8 or more characters with a mix of letters, numbers and symbols</p>
                         <div class="check">
-                            <Checkbox/> Show assword
+                            <Checkbox/> Show password
                         </div>
                        <div class="buttons">
                             <Button>Sign in instead</Button>
