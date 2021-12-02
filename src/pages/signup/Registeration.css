@@ -13,7 +13,7 @@
 
 .Left-side {
     margin:30px 40px;
-    font-size: 10px;
+    font-size: 25px;
     font-weight: normal;
     width:50%;
     
@@ -82,14 +82,9 @@
     margin-bottom:10px ;
 } 
 
-@media only screen and (max-width: 768px) {
-    .Body-Frame{
-        margin:50px 80px;
-        
-    }
-}
 
-@media only screen and (max-width: 544px){
+
+@media only screen and (max-width: 420px){
     .Body-Frame{
         border-radius: 8px;
         border: 1px solid #dadce0;

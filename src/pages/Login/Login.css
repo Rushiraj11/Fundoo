@@ -3,7 +3,7 @@
 
 
 
-.Login-container{
+.Login-frame{
     display: flex;
     flex-direction: column;
     border-radius: 8px;
@@ -70,8 +70,8 @@
     margin: 50px 0 40px 0;
 }
 
-@media only screen and (max-width: 570px) {
-    .Login-container{
+@media only screen and (max-width: 320px) {
+    .Login-frame{
         width: auto;
         margin: 5% 0;
         border: none;

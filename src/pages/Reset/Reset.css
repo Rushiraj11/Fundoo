@@ -1,16 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Roboto:wght@400&family=Zen+Kaku+Gothic+New:wght@300&display=swap');
 
-.forgot-email-frame{
+
+.reset-frame{
     display: flex;
     flex-direction: column;
     border-radius: 8px;
-    border: 1px solid #dadce0;
-    width: 380px;
-    height: 450px;
-    margin:5% auto;
-    padding: 38px 40px;
-    font-family:"Roboto";
+    border: 2px solid #dadce0;
+    width: 400px;
+    margin: 5% auto;
+    padding: 48px 50px;
+    font-family:Roboto;
 }
 
 .logo{
@@ -18,30 +18,31 @@
     text-align: center;
 }
 
-.forgot-email-header{
-    font-size: 28px;
+.reset-header{
+    font-size: 25px;
     text-align: center;
     padding-top:10px;
     font-weight: normal;
+    margin: 0;
 }
 
-.forgot-email-text{
+.reset-text{
     text-align: center;
-    font-size: 15px;
-    padding-top: 5px;
+    font-size: 20px;
+    padding-top: 15px;
 }
 
-.login-buttons{
-    padding:20px;
+.reset-buttons{
     display: flex;
     justify-content: flex-end;
+    margin: 50px 0 40px 0;
 }
 
 @media only screen and (max-width: 720px) {
-    .forgot-email-frame {
+    .reset-frame{
         width: auto;
-        margin: 8px 85px 0 5px ;
+        margin: 25% 0;
         border: none;
-        padding: 14px 5px;
+        padding: 24px 25px;
     }
 }

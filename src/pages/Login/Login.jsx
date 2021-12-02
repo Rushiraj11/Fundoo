@@ -6,7 +6,7 @@ import Button from '@mui/material/Button';
 export class Login extends Component {
     render() {
         return (
-            <div class="Login-container">
+            <div class="Login-frame">
                 <div class="logo"> Fundoo
                 </div>
                 <h1 class="Login-header">Sign in</h1>
