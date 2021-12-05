@@ -36,11 +36,12 @@ export class Reset extends Component {
         var isValid = this.validation();
         if (!isValid) {
           console.log("successsss validation");
-        }
-        let data = {
+         let data = {
+
           "password" : this.state.password,
+          // "confirmPsw": this.state.confirmPsw
            
-      };
+        };
         userService.Reset("http://fundoonotes.incubation.bridgelabz.com/api/user/reset-password", data)
         .then(()=>{
             console.log("Changed password");
@@ -49,6 +50,7 @@ export class Reset extends Component {
             console.log(err);
         });
      }
+    }
 
       changeHandle =(e)=>{
           this.setState({  //setState method is used for updating the value
@@ -72,7 +74,7 @@ export class Reset extends Component {
            <span class="reset-text">Enter your new password </span>
            <form>
                <TextField fullWidth label="Enter new password" name="password" size="small" margin="dense" error={this.state.passworderror} helperText={this.state.passworderror ? "Enter Password" : ' '} onChange={e=> this.changeHandle(e)} sx={{marginTop:'20px'}}/>
-               <TextField fullWidth label="Confirm the password" name="cconfirmPsw" size="small" margin="dense"error={this.state.confirmPswerror} helperText={this.state.confirmPswerror ? "Enter Password Again" : ' '} onChange={e=> this.changeHandle(e)} sx={{marginTop:'20px'}}/>
+               <TextField fullWidth label="Confirm the password" name="confirmPsw" size="small" margin="dense"error={this.state.confirmPswerror} helperText={this.state.confirmPswerror ? "Enter Password Again" : ' '} onChange={e=> this.changeHandle(e)} sx={{marginTop:'20px'}}/>
                <div class="reset-buttons">
                        <Button variant="contained"  onClick={this.next} sx={{width:'80px'}}>Next</Button>
                </div>

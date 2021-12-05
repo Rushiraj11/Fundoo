@@ -25,6 +25,12 @@ export class Registeration extends Component {
           confirmpwderror: false,
         };
       }
+      changeHandle =(e)=>{
+        this.setState({  //setState method is used for updating the value
+          [e.target.name]: e.target.value 
+        })
+        
+    }
     
       validation = () => {
         let isError = false;
@@ -44,30 +50,26 @@ export class Registeration extends Component {
       next = () => {
         var isValid = this.validation();
         if(!isValid){
-          console.log("validation sucessfull");
-          let data = {
-              "firstName": this.state.firstName,
-              "lastName": this.state.lastName,
-              "email" : this.state.userName,
-              "password" : this.state.password,
-              "service": "advance"
-          }
-          userService.Registration("http://fundoonotes.incubation.bridgelabz.com/api/user/userSignUp", data)
-              .then(()=>{
-                  console.log("sucessfully registered");
-              })
-              .catch ((err)=> {
-                  console.log(err);
-              });
-      }
-  }
+            console.log("validation sucessfull");
+            let data = {
+                "firstName": this.state.firstName,
+                "lastName": this.state.lastName,
+                "email" : this.state.userName,
+                "password" : this.state.password,
+                // "confirm" : this.state.confirm,
+                "service": "advance"
+            };
+            userService.Registeration("http://fundoonotes.incubation.bridgelabz.com/api/user/userSignUp", data)
+                .then(()=>{
+                    console.log("sucessfully registered");
+                })
+                .catch ((err)=> {
+                    console.log(err);
+                });
+        }
+    }
     
-      changeHandle =(e)=>{
-          this.setState({  //setState method is used for updating the value
-            [e.target.name]: e.target.value 
-          })
-          
-      }
+     
 
 
     render() {
@@ -88,7 +90,7 @@ export class Registeration extends Component {
                             <TextField  label="first name" name="firstName" size="small" margin="dense"  error={this.state.firsterror} helperText={this.state.firsterror ? "enter First name" : ' '} onChange={e=> this.changeHandle(e)} sx={{marginRight:"5px"}} />
                             <TextField  label="last name" name="lastName" size="small" margin="dense"  error={this.state.lasterror} helperText={this.state.lasterror ? "enter Last name" : ' '} onChange={e=> this.changeHandle(e)} sx={{marginLeft:"5px"}}/>
                         </div>
-                        <TextField  fullWidth label="user name"  id="user name" size="small" margin="dense"  error={this.state.userNameerror} helperText={this.state.userNameerror ? "enter User name" : 'you can use numbers,letters and periods'} onChange={e=> this.changeHandle(e)} />
+                        <TextField  fullWidth label="user name"  name="userName" size="small" margin="dense"  error={this.state.userNameerror} helperText={this.state.userNameerror ? "enter User name" : 'you can use numbers,letters and periods'} onChange={e=> this.changeHandle(e)} />
                         <div><p class="p">Use my current email address instead</p></div>
                         <div class="password">
                             <TextField label="Password" name="password" size="small" margin="dense"  error={this.state.passworderror} helperText={this.state.passworderror ? "enter Password" : ' '} onChange={e=> this.changeHandle(e)} sx={{marginRight:"5px"}} />

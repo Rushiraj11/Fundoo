@@ -21,23 +21,23 @@ export class Login extends Component {
       validation = () => {
         let isError = false;
         const error = this.state;
-        error.emailorPhoneerror = this.state.emailorPhone === "" ? true : false;
-        error.passworderror = this.state.password === "" ? true : false;
+        error.emailorPhoneerror = this.state.emailorPhone === " " ? true : false;
+        error.passworderror = this.state.password === " " ? true : false;
         this.setState({   //setState method is used for updating the value
           ...error,
         });
-        isError = error.emailorPhone ;
-        isError = error.password ;
+        isError = error.emailorPhoneerror || error.passworderror ;
+        // isError = error.password ;
         return isError;
       };
     
       next = () => {
         var isValid = this.validation();
-         console.log("successsss validation");
+         console.log("successsss validation",isValid)
         if (!isValid) {
           console.log("successsss validation");
           let data = {
-            "emailorPhone" : this.state.emailorPhone,
+            "email" : this.state.emailorPhone,
             "password": this.state.password
         };
         userService.Login("http://fundoonotes.incubation.bridgelabz.com/api/user/login", data)

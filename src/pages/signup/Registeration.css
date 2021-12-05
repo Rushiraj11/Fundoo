@@ -12,7 +12,7 @@
 }
 
 .Left-side {
-    margin:30px 40px;
+    margin:20px 20px;
     font-size: 25px;
     font-weight: normal;
     width:50%;
@@ -81,8 +81,8 @@
 
 .Right-side > img {
     margin-bottom:10px ;
-} 
 
+} 
 
 
 @media only screen and (max-width: 420px){

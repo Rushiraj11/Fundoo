@@ -3,7 +3,7 @@ import AxiosService  from "./AxioService";
 const axiosService = new AxiosService();
 
 class UserService {
-    Registeration (url, data){
+    Registeration (url,data){
         return axiosService.Post(url,data);
     }
     Login (url, data){
