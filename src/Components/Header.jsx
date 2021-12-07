@@ -25,7 +25,6 @@ import InputBase from "@mui/material/InputBase";
 import AppsRoundedIcon from "@mui/icons-material/AppsRounded";
 
 const drawerWidth = 240;
-const state = false;
 
 const Search = styled("div")(({ theme }) => ({
     color: "#5f6368",
@@ -37,7 +36,7 @@ const Search = styled("div")(({ theme }) => ({
     width: "150%",
     [theme.breakpoints.up("sm")]: {
         marginLeft: theme.spacing(10),
-        width: "auto"
+        width: "0px"
     }
 }));
 
@@ -132,7 +131,7 @@ const Drawer = styled(MuiDrawer, {
 
 export function Header() {
 
-    const [open, setOpen] = React.useState(state);
+    const [open, setOpen] = React.useState(false);
 
     const handleDrawerOpen = () => {
         setOpen(!open);
@@ -157,11 +156,11 @@ export function Header() {
                                 marginLeft: "10px",
                                 marginRight: "10px",
                                 padding: "2px",
-                                backgroundColor: "#F4B400" }} />
+                                backgroundColor: "#F4B400" }} > </LightbulbIcon>
                         <Typography variant="h6"
                             noWrap
-                            component="div"> Keep Notes </Typography>
-
+                            component="div"style={{color: "#1a73e8" }}> Keep Notes </Typography>
+                        
                            <Search>
                             <SearchIconWrapper>
                                 <SearchIcon />
