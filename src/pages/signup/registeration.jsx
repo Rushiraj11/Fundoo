@@ -102,8 +102,9 @@ export class Registeration extends Component {
                             <Checkbox/> Show password
                         </div>
                        <div class="buttons">
-                            <Button>Sign in instead</Button>
-                            <Button variant="contained" onClick={this.next}>Next</Button> 
+                           <Route>
+                            <Button onClick={()=>{"/Login"}}>Sign in instead</Button>
+                            <Button variant="contained" onClick={this.next}>Next</Button></Route>
                         </div>
                         </div>
                     </div>

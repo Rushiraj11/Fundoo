@@ -3,7 +3,6 @@ import './Login.css';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import UserService from '../../services/UserService';
-import {BrowserRouter, Route } from 'react-router-dom';
 const userService = new UserService();
 
 export class Login extends Component {
@@ -73,7 +72,7 @@ export class Login extends Component {
                 <span class="Login-text">Use your Fundo account</span>
                 <form>
                     <TextField fullWidth label="Email or Phone" name="emailorPhone" size="medium" margin="dense" error={this.state.emailorPhoneerror} helperText={this.state.emailorPhoneerror ? "Enter Email or Phone" : ' '} onChange={e=> this.changeHandle(e)} sx={{marginTop:'20px'}}/>
-                    <p class="text1">Forgot email?</p>
+                    <p class="text1" >Forgot email?</p>
                     <TextField fullWidth label="Enter Password" name="password" size="medium" margin="dense" error={this.state.passworderror} helperText={this.state.passworderror ? "Enter Password" : ' '} onChange={e=> this.changeHandle(e)} sx={{marginTop:'20px'}}/>
                     <div class="text2">
                         Not your computer? Use Guest mode to sign in privately.

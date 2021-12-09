@@ -1,0 +1,41 @@
+
+/* take anote css */
+.note-container{
+    border-radius: 8px;
+    border: solid transparent;
+    display: flex;
+    margin: 0 auto;
+    border-width: 1px 1px 1px 6px;
+    justify-content: space-between;
+    width: 50%;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+   
+}
+.note-container input{
+    outline: none;
+    border: none;
+    min-height: 40px;
+    font-size: 15px;
+}
+.note-container.notes{
+    flex-direction:column;
+
+
+}
+.note-container > .Bottom {
+    margin:10px;
+    justify-content: space-between;
+    
+}
+.display-notes {
+    border-radius: 8px;
+    border: 2px solid #dadce0;
+    margin: 50px;
+    width: 250px;
+    height: 150px;
+
+}
+
+.display-notes > .container{
+    padding-top: 105px; 
+}

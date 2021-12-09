@@ -23,6 +23,9 @@ import SearchIcon from "@mui/icons-material/Search";
 import AccountCircle from "@mui/icons-material/AccountCircle";
 import InputBase from "@mui/material/InputBase";
 import AppsRoundedIcon from "@mui/icons-material/AppsRounded";
+import Note from './Notes/Note';
+import TakeaNote from './Notes/TakeaNote';
+
 
 const drawerWidth = 240;
 
@@ -89,8 +92,7 @@ const DrawerHeader = styled("div")(({ theme }) => ({
     display: "flex",
     alignItems: "center",
     justifyContent: "flex-end",
-    padding: theme.spacing(0, 1),
-    // necessary for content to be below app bar
+    padding: theme.spacing(0, 1),  // necessary for content to be below app bar
     ...theme.mixins.toolbar
 }));
 
@@ -156,12 +158,13 @@ export function Header() {
                                 marginLeft: "10px",
                                 marginRight: "10px",
                                 padding: "2px",
-                                backgroundColor: "#F4B400" }} > </LightbulbIcon>
+                                backgroundColor: "#F4B400"
+                            }} > </LightbulbIcon>
                         <Typography variant="h6"
                             noWrap
-                            component="div"style={{color: "#1a73e8" }}> Keep Notes </Typography>
-                        
-                           <Search>
+                            component="div" style={{ color: "#1a73e8" }}> Keep Notes </Typography>
+
+                        <Search>
                             <SearchIconWrapper>
                                 <SearchIcon />
                             </SearchIconWrapper>
@@ -216,7 +219,17 @@ export function Header() {
                         )}
                     </List>
                 </Drawer>
+                {/* <Note /> */}
+                <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
+                    <DrawerHeader />
+                    <Typography >
+                        <TakeaNote />
+                    </Typography>
+
+                </Box>
+
             </Box>
+
         </div>
     )
 }
