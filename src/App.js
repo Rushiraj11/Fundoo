@@ -20,7 +20,7 @@ function App() {
        <Route path ='/Login' component={Login}> </Route>
       <Route path ='/Forget' component={Forget}> </Route>
       <Route path ='/Reset' component={Reset}> </Route>  */}
-      <Dashboard />
+      <Dashboard car="Merceds" />
     </div>
     // </Routes>
       // </BrowserRouter>

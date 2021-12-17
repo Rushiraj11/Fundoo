@@ -23,8 +23,8 @@ import SearchIcon from "@mui/icons-material/Search";
 import AccountCircle from "@mui/icons-material/AccountCircle";
 import InputBase from "@mui/material/InputBase";
 import AppsRoundedIcon from "@mui/icons-material/AppsRounded";
-import Note from './Notes/Note';
-import TakeaNote from './Notes/TakeaNote';
+import Home from '../pages/Home/Home';
+
 
 
 const drawerWidth = 240;
@@ -219,11 +219,11 @@ export function Header() {
                         )}
                     </List>
                 </Drawer>
-                {/* <Note /> */}
+            
                 <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
                     <DrawerHeader />
                     <Typography >
-                        <TakeaNote />
+                        <Home />
                     </Typography>
 
                 </Box>

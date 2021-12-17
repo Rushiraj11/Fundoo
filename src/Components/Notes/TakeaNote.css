@@ -1,0 +1,21 @@
+.note-container{
+    border-radius: 5px;
+    border: solid transparent;
+    display: flex;
+    margin-left: 20vw;
+    margin-top: 5vh;
+    justify-content: space-between;
+    width: 50%;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+   
+}
+.note-container.notes{
+    flex-direction:column;
+
+
+}
+.note-container > .Bottom {
+    margin:10px;
+    justify-content: space-between;
+    
+}

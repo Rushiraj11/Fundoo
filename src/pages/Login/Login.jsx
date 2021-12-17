@@ -44,6 +44,7 @@ export class Login extends Component {
             .then((success)=>{
                 console.log(success);
                 console.log("sucessfully logged in");
+                localStorage.setItem("token",success.data.id)
             })
             .catch ((err)=> {
                 console.log(err);
