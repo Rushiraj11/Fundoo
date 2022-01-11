@@ -22,7 +22,6 @@ export class Dashboard extends Component {
     return (
       <div>
         <Header listentoheader={this.listentoheader} />
-        <div>Hello</div>
         </div>
     )
   }

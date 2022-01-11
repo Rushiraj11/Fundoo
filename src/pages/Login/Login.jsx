@@ -45,6 +45,7 @@ export class Login extends Component {
                 console.log(success);
                 console.log("sucessfully logged in");
                 localStorage.setItem("token",success.data.id)
+                 this.props.history.push("/Dashboard")
             })
             .catch ((err)=> {
                 console.log(err);

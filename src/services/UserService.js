@@ -30,6 +30,20 @@ class UserService {
         console.log(headerConfig)
         return axiosService.Get(url, headerConfig);
     }
+    changeColor(url,obj) {
+        console.log(headerConfig)
+        return axiosService.Post(url,obj, headerConfig);
+    }
+    addArchive(url,obj) {
+        return axiosService.Post(url,obj, headerConfig);
+    
+    }
+    deleteNotes(url,obj) {
+        return axiosService.Post(url,obj, headerConfig);
+    }
+    updateNotes(url,obj) {
+        return axiosService.Post(url,obj, headerConfig);
+    }
 }
 
 export default UserService;

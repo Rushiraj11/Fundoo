@@ -4,7 +4,9 @@ import TextField from '@mui/material/TextField'
 import Checkbox from '@mui/material/Checkbox';
 import Button from '@mui/material/Button';
 import UserService from '../../services/UserService';
-import {BrowserRouter, Route } from 'react-router-dom';
+
+
+
 const userService = new UserService();
 
 
@@ -12,7 +14,8 @@ export class Registeration extends Component {
 
     constructor(props) {
         super(props);
-    
+    console.log(this.props);
+
         this.state = {
           firstName: " ",
           lastName: " ",
@@ -27,7 +30,7 @@ export class Registeration extends Component {
         };
       }
       changeHandle =(e)=>{
-        this.setState({  //setState method is used for updating the value
+        this.setState({  
           [e.target.name]: e.target.value 
         })
         
@@ -57,16 +60,18 @@ export class Registeration extends Component {
                 "lastName": this.state.lastName,
                 "email" : this.state.userName,
                 "password" : this.state.password,
-                // "confirm" : this.state.confirm,
                 "service": "advance"
             };
             userService.Registeration("http://fundoonotes.incubation.bridgelabz.com/api/user/userSignUp", data)
                 .then(()=>{
                     console.log("sucessfully registered");
+                    this.props.history.push("/")
+                    
                 })
                 .catch ((err)=> {
                     console.log(err);
                 });
+                
         }
     }
     
@@ -102,9 +107,9 @@ export class Registeration extends Component {
                             <Checkbox/> Show password
                         </div>
                        <div class="buttons">
-                           <Route>
+                           
                             <Button onClick={()=>{"/Login"}}>Sign in instead</Button>
-                            <Button variant="contained" onClick={this.next}>Next</Button></Route>
+                            <Button variant="contained" onClick={this.next}>Next</Button>
                         </div>
                         </div>
                     </div>

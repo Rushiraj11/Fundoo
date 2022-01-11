@@ -9,12 +9,14 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import IconButton from "@mui/material/IconButton";
 import './Header.css';
 import Home from '../../pages/Home/Home';
+import { connect } from 'react-redux';
 
 
 
-export default function Header(props ) {
+ function Header(props ) {
     
     const [open, setOpen] = React.useState(false);
+    
 const takeclick=()=>{
 
  props. listentoheader("hello from header")
@@ -31,7 +33,7 @@ const takeclick=()=>{
                 <div class="left-side">
                     <IconButton onClick={takeclick}><DehazeOutlinedIcon/></IconButton>
                     <img class="gb_tc gb_0d" src="https://www.gstatic.com/images/branding/product/1x/keep_2020q4_48dp.png" srcset="https://www.gstatic.com/images/branding/product/1x/keep_2020q4_48dp.png 1x, https://www.gstatic.com/images/branding/product/2x/keep_2020q4_48dp.png 2x "></img>
-                    <span className="text">Keep</span>
+                    <h3>{props.changeText}</h3>
                 </div>
                 <div class="Search-bar">
                 <IconButton> <SearchOutlinedIcon/></IconButton>
@@ -52,3 +54,10 @@ const takeclick=()=>{
             
     )
 }
+const mapStateToProps = state => {
+    return {
+        changeText: state.navReducer.changeoption
+    }
+}
+
+export default connect(mapStateToProps)(Header);
