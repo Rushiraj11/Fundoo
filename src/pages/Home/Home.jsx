@@ -55,10 +55,12 @@ else if(data === "Archive"){
         <div>
            <TakeaNote listenToTakeNote={listenToTakeNote} />
            <DisplayNote typeOfNote={typeOfNote} update={update} color={color}/>
-           <MiniDrawer  changeToUpdatedNote={changeToUpdatedNote} opennav={opennav} />
+           <MiniDrawer changeToUpdatedNote={changeToUpdatedNote} opennav={opennav} />
            </div>
 
         
     )
 }
+
+
 export default connect()(Home); 

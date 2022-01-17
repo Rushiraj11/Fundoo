@@ -53,6 +53,7 @@ export default function TakeaNote({ listenToTakeNote }) {
     setColor(color);
   };
 
+
   return (
     <div>
       <div>

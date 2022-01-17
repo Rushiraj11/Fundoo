@@ -1,4 +1,4 @@
- .MuiDrawer-paper{
-     margin-top: 65px;
-    overflow-y: hidden;
+.MuiDrawer-paper{
+     margin-top: 85px;
+     position: absolute;
 }

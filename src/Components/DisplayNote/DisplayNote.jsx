@@ -1,12 +1,16 @@
 import React from "react";
+import { fetchNotes } from "../../Redux/NotesAction";
 import UserService from "../../services/UserService";
 import DisplayNote1 from "../DisplayNote1/DisplayNote1";
 import "./DisplayNote.css";
+import { connect } from 'react-redux';
 const userService = new UserService();
 
-export default function DisplayNote({ update,color,takeUpdateNote,typeOfNote }) {
+ function DisplayNote({ update,color,takeUpdateNote,typeOfNote,dispatch,Notes,loading,error }) {
   const [notes, setNotes] = React.useState([]);
+ // const [loading,setLoading] = React.useState(true)
 const getAllNotes=(typeOfNote)=>{
+   dispatch(fetchNotes())
    userService.displayNotes(
     "http://fundoonotes.incubation.bridgelabz.com/api/notes/getNotesList"
   )
@@ -49,10 +53,26 @@ const listenToColor=()=>{
   return (
     <div>
       <div className="display-notes">
-        {notes.map((notes,index) => (
+       {loading ? <div> loading</div> : 
+        Notes.map((notes,index) => (
           <DisplayNote1 key={index} notes={notes} takeUpdateNote={takeUpdateNote}  listenToColor={listenToColor} ></DisplayNote1>
         ))}
       </div>
     </div>
   );
 }
+
+const mapStateToProps = state => {
+  return {
+      loading: state.notesApi.loading,
+      Notes: state.notesApi.Notes,
+      error: state.notesApi.error,
+
+  }
+}
+// const mapDispatchToProps = dispatch => {
+//   return {
+//       fetchNotes: () => dispatch(fetchNotes())
+//   }
+// }
+export default connect(mapStateToProps)(DisplayNote)

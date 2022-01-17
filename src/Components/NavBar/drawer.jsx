@@ -16,7 +16,7 @@ import DeleteOutlineOutlinedIcon from "@mui/icons-material/DeleteOutlineOutlined
 import { connect } from 'react-redux';
 import "../NavBar/drawer.css";
 
-const drawerWidth = 240;
+const drawerWidth = 200;
 
 const openedMixin = (theme) => ({
   width: drawerWidth,
@@ -65,7 +65,7 @@ function  MiniDrawer({ opennav ,changeToUpdatedNote}) {
       <Drawer
         variant="permanent"
         open={opennav}
-        style={{ backgroundColor: "black" }}
+        style={{ backgroundColor: "black"}}
       >
         <List>
           <ListItem button key="Notes" onClick={()=>changeToUpdatedNote("Notes")}>
